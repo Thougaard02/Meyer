@@ -154,6 +154,17 @@ namespace Meyer
                     Console.ReadKey();
                     Console.Clear();
 
+                    if (i == playerNames.Length - 1)
+                    {
+                        Console.WriteLine(playerNames[i - i] + " What are you going to do");
+
+                    }
+                    else
+
+                    {
+                        Console.WriteLine(playerNames[i + 1] + " What are you going to do");
+
+                    }
                     Console.WriteLine("Press 1 to trust!");
                     Console.WriteLine("Press 2 to dont believe");
 
@@ -161,20 +172,19 @@ namespace Meyer
 
                     // FIX OPTION ONE!!! IT TAKES THE SAME PLAYER AGIAN IT SHOULD TAKE THE NEXT PLAYER!
                     int userInput = Int32.Parse(Console.ReadLine());
-                    if (userInput == 1)
+                   if (userInput == 1)
                     {
-                        Console.WriteLine((playerNames[i]) + " Press any key to roll");                       
+                        Console.Clear();
                     }
                     else if (userInput == 2)
                     {
                         Console.WriteLine(playerNames[i] + " Slog " + randomNumber);
+                        Console.ReadKey();
+                        Console.Clear();
                     }
-
-
-                    //Console.WriteLine("Hit a " + randomNumber);
+                   
                     Console.ReadKey();
                 }
-
 
             }
         }
