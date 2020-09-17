@@ -14,8 +14,8 @@ namespace Meyer
         static void Main(string[] args)
         {
             Player player = new Player();
-            player.Players();         
-            player.PLayerChoice();
+            player.PlayerSelection();            
+            player.PlayerChoice();
             //DiceRoll roll = new DiceRoll();
             //roll.DiceGenerator();
         }

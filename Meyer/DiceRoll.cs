@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,20 +10,20 @@ namespace Meyer
     class DiceRoll
     {
 
-        public void DiceGenerator()
+        public string DiceGenerator()
         {
             Random rd = new Random();
 
-            while (true)
-            {
-                int firstDice = rd.Next(1, 7);
-                int secondDice = rd.Next(1, 6);
+            int firstDice = rd.Next(1, 7);
+            int secondDice = rd.Next(1, 7);
 
-                Console.WriteLine(firstDice);
-                Console.WriteLine(secondDice);
+            Console.WriteLine(firstDice);
+            Console.WriteLine(secondDice);
 
-            Console.ReadKey();
-            }
+            string result = Convert.ToString(firstDice + secondDice);
+
+
+            return result;
         }
     }
 }
